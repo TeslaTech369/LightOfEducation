@@ -21,15 +21,15 @@ def exams():
     exam_data = list(db.exams.find())
     return render_template("exams.html", exams=exam_data)
 
-@app.route('/pdfs')
+@app.route('/academic')
 def pdfs():
     pdf_data = list(db.pdfs.find())
-    return render_template("pdfs.html", pdfs=pdf_data)
+    return render_template("academic.html", pdfs=pdf_data)
 
-@app.route('/notes')
+@app.route('/admission')
 def notes():
     notes_data = list(db.notes.find())
-    return render_template("notes.html", notes=notes_data)
+    return render_template("admission.html", notes=notes_data)
 
 @app.route('/leaderboard')
 def leaderboard():
