@@ -53,10 +53,17 @@ const bookImages = [
     "https://i.postimg.cc/nrvH1YLk/6920933-removebg-preview.png",
     "https://i.postimg.cc/6QR1qHbY/f0b54a36-6f45-4e08-93b0-fc7e2a1f9306-removebg-preview.png",
     "https://i.postimg.cc/Gm65c0K4/r2ux-u9bu-220227-removebg-preview.png",
-    "https://i.postimg.cc/nrvH1YLk/6920933-removebg-preview.png"
+    "https://i.postimg.cc/nrvH1YLk/6920933-removebg-preview.png",
+    "https://i.postimg.cc/13Dfkq84/10088-removebg-preview.png",
+    "https://i.postimg.cc/s2yvsgWm/10586-removebg-preview.png",
+    "https://i.postimg.cc/jq92CXNL/20944356-removebg-preview.png",
+    "https://i.postimg.cc/rsvwbVcS/20944386-removebg-preview.png",
+    "https://i.postimg.cc/LsThXFBp/3974104-removebg-preview.png",
+    "https://i.postimg.cc/Jnz0HYPB/4119036-removebg-preview.png",
+    "https://i.postimg.cc/B676T5V7/5437683-removebg-preview.png",
+    "https://i.postimg.cc/PJLq2pGX/6349007-removebg-preview.png",
+    "https://i.postimg.cc/L61XP1Bv/na-feb-36-removebg-preview.png"
 ];
-
-
 
 function createFloatingBooks(count = 15) {
     for (let i = 0; i < count; i++) {
