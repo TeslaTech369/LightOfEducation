@@ -20,32 +20,55 @@
     color: #cceeff;
 }
 
-.note-card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 30px;
-    padding: 0 20px;
+/* Folder Styles */
+.folder {
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 15px 25px;
+    margin: 10px auto;
+    border-radius: 15px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    max-width: 500px;
+    color: #00e0ff;
+    text-shadow: 0 0 5px #00e0ff88;
+    border: 1px solid #00e0ff33;
+    box-shadow: 0 0 15px #00e0ff22;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+.folder:hover {
+    background: rgba(0, 0, 0, 0.6);
+    transform: scale(1.02);
 }
 
+.folder-content {
+    display: none;
+    margin: 20px auto 40px;
+    max-width: 900px;
+    padding: 20px;
+    border-left: 4px solid #00e0ff66;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 10px #00e0ff33;
+}
+
+/* Note Cards inside folders */
 .note-card {
     background: rgba(0, 0, 0, 0.3);
     border: 1px solid #00e0ff33;
     padding: 20px;
+    margin: 10px 0;
     border-radius: 15px;
     backdrop-filter: blur(10px);
     box-shadow: 0 0 20px #00e0ff44;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.note-card h2 {
+.note-card h3, .note-card h4 {
     color: #ffffff;
     margin-bottom: 10px;
-    font-size: 1.5rem;
-}
-
-.note-card p {
-    color: #cceeff;
-    margin-bottom: 20px;
+    font-size: 1.3rem;
 }
 
 .note-card a {
