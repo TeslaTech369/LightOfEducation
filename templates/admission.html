@@ -1,80 +1,105 @@
 {% extends "base.html" %}
-{% block title %}Light of Education - Notes{% endblock %}
+{% block title %}Light of Education - Admission{% endblock %}
 
 {% block content %}
 <link rel="stylesheet" href="{{ url_for('static', filename='admission.css') }}">
 
 <div class="notes-container">
     <h1><i class="fa-solid fa-award"></i>Admission Content</h1>
-    <p>Browse and download your admission study materials easily.</p>
+    <p>Click a category to explore its study materials.</p>
 
-    <div class="note-card-grid">
+    <!-- FOLDER SYSTEM -->
+    <div class="folder" onclick="toggleFolder('medical')"><i class="fa-solid fa-stethoscope"></i> Medical</div>
+    <div id="medical" class="folder-content">
         <div class="note-card">
-            <h2>Physics 1st Paper</h2>
-            <p>Admission Study Materials</p>
-            <a href="/static/notes/physics1.pdf" target="_blank">Tour</a>
+            <h3>Medical Admission Test</h3>
+            <a href="/static/notes/biology1_medical.pdf" target="_blank">Tour</a>
         </div>
+    </div>
+
+    <div class="folder" onclick="toggleFolder('engineering')"><i class="fa-solid fa-gears"></i> Engineering</div>
+    <div id="engineering" class="folder-content">
+        <strong>BUET</strong>
         <div class="note-card">
-            <h2>Physics 2nd Paper</h2>
-            <p>Admission Study Materials</p>
-            <a href="/static/notes/biology_diagrams.pdf" target="_blank">Tour</a>
+            <h4>Bangladesh University of Engineering and Technology</h4>
+            <a href="/static/notes/math1_buet.pdf" target="_blank">Tour</a>
         </div>
-                <div class="note-card">
-            <h2>Chemistry 1st Paper</h2>
-            <p>Admission Study Materials</p>
-            <a href="/static/notes/physics1.pdf" target="_blank">Tour</a>
-        </div>
+        <strong>RUET</strong>
         <div class="note-card">
-            <h2>Chemistry 2nd Paper</h2>
-            <p>Admission Study Materials</p>
-            <a href="/static/notes/biology_diagrams.pdf" target="_blank">Tour</a>
+            <h4>Rajshahi University of Engineering & Technology.</h4>
+            <a href="/static/notes/physics1_cuet.pdf" target="_blank">Tour</a>
         </div>
-                <div class="note-card">
-            <h2>Math 1st Paper</h2>
-            <p>Admission Study Materials</p>
-            <a href="/static/notes/physics1.pdf" target="_blank">Tour</a>
-        </div>
+        <strong>CUET</strong>
         <div class="note-card">
-            <h2>Math 2nd Paper</h2>
-            <p>Admission Study Materials</p>
-            <a href="/static/notes/biology_diagrams.pdf" target="_blank">Tour</a>
+            <h4>Chittagong University of Engineering and Technology</h4>
+            <a href="/static/notes/physics1_cuet.pdf" target="_blank">Tour</a>
         </div>
-                <div class="note-card">
-            <h2>Biology 1st Paper</h2>
-            <p>Admission Study Materials</p>
-            <a href="/static/notes/physics1.pdf" target="_blank">Tour</a>
-        </div>
+        <strong>KUET</strong>
         <div class="note-card">
-            <h2>Biology 2nd Paperr</h2>
-            <p>Admission Study Materials</p>
-            <a href="/static/notes/biology_diagrams.pdf" target="_blank">Tour</a>
+            <h4>Khulna University of Engineering & Technology</h4>
+            <a href="/static/notes/physics1_cuet.pdf" target="_blank">Tour</a>
         </div>
-                <div class="note-card">
-            <h2>English 1st Paper</h2>
-            <p>Admission Study Materials</p>
-            <a href="/static/notes/physics1.pdf" target="_blank">Tour</a>
-        </div>
+        <strong>IUT</strong>
         <div class="note-card">
-            <h2>English 2nd Paper</h2>
-            <p>Admission Study Materials</p>
-            <a href="/static/notes/biology_diagrams.pdf" target="_blank">Tour</a>
+            <h4>Islamic University of Technology</h4>
+            <a href="/static/notes/physics1_cuet.pdf" target="_blank">Tour</a>
         </div>
-                <div class="note-card">
-            <h2>Bangla 1st Paper</h2>
-            <p>Admission Study Materials</p>
-            <a href="/static/notes/physics1.pdf" target="_blank">Tour</a>
-        </div>
+    </div>
+
+    <div class="folder" onclick="toggleFolder('varsity')"><i class="fa-solid fa-graduation-cap"></i> Varsity</div>
+    <div id="varsity" class="folder-content">
+        <strong>DU</strong>
         <div class="note-card">
-            <h2>Bangla 2nd Paper</h2>
-            <p>Admission Study Materials</p>
-            <a href="/static/notes/biology_diagrams.pdf" target="_blank">Tour</a>
+            <h4>University of Dhaka</h4>
+            <a href="/static/notes/english1_du.pdf" target="_blank">Tour</a>
         </div>
-                <div class="note-card">
-            <h2>ICT</h2>
-            <p>Admission Study Materials</p>
-            <a href="/static/notes/physics1.pdf" target="_blank">Tour</a>
+        <strong>RU</strong>
+        <div class="note-card">
+            <h4>University of Rajshahi</h4>
+            <a href="/static/notes/bangla2_ru.pdf" target="_blank">Tour</a>
         </div>
-        <!-- Add more note cards as needed -->
+        <strong>JU</strong>
+        <div class="note-card">
+            <h4>Jahangirnagar University</h4>
+            <a href="/static/notes/english1_du.pdf" target="_blank">Tour</a>
+        </div>
+        <strong>JnU</strong>
+        <div class="note-card">
+            <h4>Jagannath University</h4>
+            <a href="/static/notes/bangla2_ru.pdf" target="_blank">Tour</a>
+        </div>
+        <strong>CU</strong>
+        <div class="note-card">
+            <h4>University of Chittagong</h4>
+            <a href="/static/notes/english1_du.pdf" target="_blank">Tour</a>
+        </div>
+        <strong>KU</strong>
+        <div class="note-card">
+            <h4>Khulna University</h4>
+            <a href="/static/notes/bangla2_ru.pdf" target="_blank">Tour</a>
+        </div>
+        <strong>CoU</strong>
+        <div class="note-card">
+            <h4>Comilla University</h4>
+            <a href="/static/notes/english1_du.pdf" target="_blank">Tour</a>
+        </div>
+        <strong>Agri</strong>
+        <div class="note-card">
+            <h4> Agriculture University Admission</h4>
+            <a href="/static/notes/bangla2_ru.pdf" target="_blank">Tour</a>
+        </div>
+        <strong>GST</strong>
+        <div class="note-card">
+            <h4>GST Admission</h4>
+            <a href="/static/notes/english1_du.pdf" target="_blank">Tour</a>
+        </div>
     </div>
 </div>
+
+<script>
+    function toggleFolder(id) {
+        const section = document.getElementById(id);
+        section.style.display = section.style.display === "block" ? "none" : "block";
+    }
+</script>
 {% endblock %}
